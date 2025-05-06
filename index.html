@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App - Privacy & Support</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .last-updated {
+            color: #666;
+            font-style: italic;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .nav-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .nav-button:hover {
+            background-color: #34495e;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-buttons">
+        <a href="#privacy" class="nav-button" onclick="showSection('privacy')">Privacy Policy</a>
+        <a href="#support" class="nav-button" onclick="showSection('support')">Support</a>
+    </div>
+
+    <div id="privacy" class="section active">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: [Current Date]</p>
+
+        <h2>Introduction</h2>
+        <p>This Privacy Policy describes how we collect, use, and handle your personal information when you use our Dictionary iOS application ("the App").</p>
+
+        <h2>Information We Collect</h2>
+        <h3>Authentication Information</h3>
+        <p>When you create an account, we collect:</p>
+        <ul>
+            <li>Email address</li>
+            <li>Password (stored securely using Firebase Authentication)</li>
+        </ul>
+
+        <h3>User Data</h3>
+        <p>We store the following information in Firebase Firestore:</p>
+        <ul>
+            <li>Saved words and their definitions</li>
+            <li>User preferences and settings</li>
+            <li>Search history (if enabled)</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use the collected information to:</p>
+        <ul>
+            <li>Provide and maintain the App's functionality</li>
+            <li>Save your dictionary entries and preferences</li>
+            <li>Improve the App's features and user experience</li>
+            <li>Send important updates about the App (if you opt-in)</li>
+        </ul>
+
+        <h2>Data Storage and Security</h2>
+        <p>Your data is stored securely using Firebase services:</p>
+        <ul>
+            <li>Firebase Authentication for secure user authentication</li>
+            <li>Firebase Firestore for storing your saved words and preferences</li>
+        </ul>
+        <p>We implement appropriate security measures to protect your personal information.</p>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access your personal data</li>
+            <li>Delete your account and associated data</li>
+            <li>Export your saved words and preferences</li>
+            <li>Opt-out of non-essential data collection</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>We use the following third-party services:</p>
+        <ul>
+            <li>Firebase (Google) for authentication and data storage</li>
+            <li>Apple App Store for app distribution</li>
+            <li>OpenAI API for word translations and definitions</li>
+        </ul>
+
+        <h2>Data Processing and AI Services</h2>
+        <p>When you search for words or request translations:</p>
+        <ul>
+            <li>Your search queries are processed by OpenAI's API to provide accurate translations and definitions</li>
+            <li>These queries are sent securely to OpenAI's servers</li>
+            <li>OpenAI may store and process this data according to their privacy policy</li>
+            <li>We do not share any additional personal information with OpenAI beyond what is necessary for the translation service</li>
+        </ul>
+        <p>For more information about how OpenAI handles data, please refer to their <a href="https://openai.com/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>Our App is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p>[Your Contact Email]</p>
+    </div>
+
+    <div id="support" class="section">
+        <h1>Support Center</h1>
+        <p>Welcome to the Dictionary App Support Center. Here you'll find answers to common questions and ways to get help.</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>How do I create an account?</h3>
+            <p>To create an account:</p>
+            <ol>
+                <li>Open the Dictionary App</li>
+                <li>Tap the "Sign Up" button</li>
+                <li>Enter your email address</li>
+                <li>Create a password</li>
+                <li>Follow the verification steps sent to your email</li>
+            </ol>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I save words?</h3>
+            <p>To save a word:</p>
+            <ol>
+                <li>Search for the word you want to save</li>
+                <li>Tap the bookmark icon next to the word</li>
+                <li>The word will be saved to your personal dictionary</li>
+            </ol>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I access my saved words?</h3>
+            <p>To view your saved words:</p>
+            <ol>
+                <li>Tap the "Saved Words" tab in the bottom navigation</li>
+                <li>Browse through your saved words</li>
+                <li>Tap any word to view its full definition</li>
+            </ol>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I reset my password?</h3>
+            <p>To reset your password:</p>
+            <ol>
+                <li>Go to the login screen</li>
+                <li>Tap "Forgot Password"</li>
+                <li>Enter your email address</li>
+                <li>Follow the instructions sent to your email</li>
+            </ol>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I delete my account?</h3>
+            <p>To delete your account:</p>
+            <ol>
+                <li>Go to Settings</li>
+                <li>Tap "Account Settings"</li>
+                <li>Select "Delete Account"</li>
+                <li>Confirm your decision</li>
+            </ol>
+            <p>Note: This action cannot be undone. All your saved words and data will be permanently deleted.</p>
+        </div>
+
+        <div class="contact-section">
+            <h2>Need More Help?</h2>
+            <p>If you couldn't find the answer to your question, please contact our support team:</p>
+            <ul>
+                <li>Email: [Your Support Email]</li>
+                <li>Response Time: We typically respond within 24-48 hours</li>
+            </ul>
+            <p>When contacting support, please include:</p>
+            <ul>
+                <li>Your device model and iOS version</li>
+                <li>A detailed description of your issue</li>
+                <li>Any error messages you're seeing</li>
+                <li>Screenshots if applicable</li>
+            </ul>
+        </div>
+
+        <div class="contact-section">
+            <h2>App Information</h2>
+            <p>Current Version: [Your App Version]</p>
+            <p>Last Updated: [Last Update Date]</p>
+            <p>Minimum iOS Version Required: iOS 13.0 or later</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update URL hash
+            window.location.hash = sectionId;
+        }
+
+        // Show the correct section based on URL hash on page load
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                showSection(hash);
+            }
+        });
+    </script>
+</body>
+</html> 
